@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb/base", "prettier"],
+  "plugins": ["import", "prettier"],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": { "ecmaVersion": 6 },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": 2,
+    "global-require": "off",
+    "no-undef": 2,
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "semi": [2, "never"],
+    "comma-dangle": "off",
+    "class-methods-use-this": "off",
+    "consistent-return": "off"
+  }
+}

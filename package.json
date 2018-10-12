@@ -1,0 +1,62 @@
+{
+  "name": "nodejs-koa-boilerplate",
+  "version": "1.0.0",
+  "description": "NodeJS Koa Boilerplate",
+  "main": "./src/bin/www.js",
+  "author": "Vlad Morzhanov",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node ./dist/index.js"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "koa.js",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "@koa/cors": "2",
+    "awilix": "^3.0.9",
+    "awilix-koa": "^2.1.1",
+    "bcrypt-nodejs": "0.0.3",
+    "dotenv": "^6.0.0",
+    "jsonwebtoken": "^5.7.0",
+    "koa": "^2.5.3",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
+    "koa-cookie": "^1.0.0",
+    "koa-helmet": "^4.0.0",
+    "koa-requestid": "^2.0.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.16.0",
+    "pg": "^7.5.0",
+    "request": "^2.81.0",
+    "typeorm": "^0.2.7",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0-beta.53",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.10.2",
+    "prettier-eslint": "^8.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladMorzhanov/nodejs-boilerplate.git"
+  },
+  "homepage": "https://github.com/VladMorzhanov/nodejs-boilerplate#readme"
+}
