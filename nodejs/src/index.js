@@ -1,3 +1,4 @@
+import '@babel/polyfill'
 import http from 'http'
 import { createDatabaseConnection } from './db'
 import { createApp } from './app'
@@ -20,6 +21,8 @@ createDatabaseConnection().then(connection => {
   logger.info('Server created, ready to listen', { scope: 'startup' })
 
   app.listen(PORT, () => {
-    logger.info(`Server listening on ${PORT} in ${NODE_ENV} mode`)
+    logger.info(
+      `Server listening on ${PORT} in ${NODE_ENV} mode  PID: ${process.pid}`
+    )
   })
 })

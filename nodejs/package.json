@@ -8,18 +8,24 @@
   "scripts": {
     "start": "babel-node src/index.js",
     "build": "babel src --out-dir dist",
-    "serve": "node ./dist/index.js"
+    "serve": "node ./dist/index.js",
+    "spawn": "yarn build && yarn processes:delete && yarn processes:generate",
+    "processes:generate": "pm2 start ./dist/index.js -i 4",
+    "processes:delete": "pm2 delete all",
+    "processes:list": "pm2 list"
   },
   "keywords": [
     "node",
     "node.js",
     "koa.js",
-    "boilerplate"
+    "reverse-proxy",
+    "pm2"
   ],
   "dependencies": {
     "@koa/cors": "2",
     "awilix": "^3.0.9",
     "awilix-koa": "^2.1.1",
+    "@babel/polyfill": "^7.0.0",
     "bcrypt-nodejs": "0.0.3",
     "dotenv": "^6.0.0",
     "jsonwebtoken": "^5.7.0",
@@ -41,9 +47,9 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.0.0-beta.51",
     "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.0.0-beta.53",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/preset-env": "^7.0.0-beta.53",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -51,6 +57,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
     "nodemon": "^1.18.4",
+    "pm2": "^3.2.2",
     "prettier": "^1.10.2",
     "prettier-eslint": "^8.8.2"
   },

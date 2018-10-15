@@ -5,7 +5,7 @@
       "name": "Launch with nodemon",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceRoot}/node_modules/nodemon/bin/nodemon.js"
+      "program": "${workspaceRoot}/nodejs/node_modules/nodemon/bin/nodemon.js"
     }
   ]
 }
