@@ -72,7 +72,3 @@ Vlad Morzhanov
 
 Copyright (c) 2018 Vlad Morzhanov.
 You can review license in the LICENSE file.
-
-docker build -t nodejs-reverse-proxy-example/nodejs .
-
-docker run -d nodejs-reverse-proxy-example/nodejs
